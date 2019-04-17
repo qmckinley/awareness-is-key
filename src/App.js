@@ -14,22 +14,30 @@ class App extends Component {
 	}
 	componentDidMount() {
 		this.setState({ documentaries: documentaries });
+		console.log(documentaries);
 	}
 	onSearchChange = (event) => {
-		this.setState({ searchfield: event.target.value })
+		debugger;
+		this.setState({ searchfield: event.target.value });
+		console.log(documentaries);
+		// console.log(filteredDocs);
+		
 	}
 	render() {
-		const filteredDocumentaries = this.state.documentaries.filter(documentaries => {
-			return documentaries.title.toLowerCase().includes(this.state.searchfield.toLowerCase());
-		});
+		// const filteredDocs = this.state.documentaries.filter((doc, i) => {
+		// 	return documentaries.title.toLowerCase().includes(this.state.searchfield.toLowerCase());
+		// });
+		console.log(documentaries);
 		return (
 			<div className='tc'>
 				<h1>Documentaries</h1>
 				<SearchBox searchChange={this.onSearchChange}/>
-				<DocList documentaries={filteredDocumentaries} />
+				<DocList documentaries={this.state.documentaries} />
 			</div>
 		);
 	}
 }
 
 export default App;
+
+

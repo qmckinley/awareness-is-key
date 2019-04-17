@@ -1,5 +1,5 @@
 import React from 'react';
-import DocBox from './DocBox';
+import DocCard from './DocCard';
 
 const DocList = ({ documentaries }) => { 
     return(
@@ -8,7 +8,7 @@ const DocList = ({ documentaries }) => {
                 documentaries.map((doc, i) => {
                     return(
                         <div>
-                            <DocBox
+                            <DocCard
                                 key={i} 
                                 id={documentaries[i].id} 
                                 title={documentaries[i].title} 
@@ -28,3 +28,14 @@ const DocList = ({ documentaries }) => {
 }
 
 export default DocList;
+
+//  const CardList = ({ robots }) => {
+//      const cardComponent = robots.map((user, i) => {
+//          return <Card id={robots[i].id} />
+//      })
+//      return (
+//          <div>
+//              {cardComponent}
+//          </div>
+//      );
+//  }

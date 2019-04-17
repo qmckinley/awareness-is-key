@@ -1,7 +1,6 @@
 import React from 'react';
-// import { documentaries } from './documentaries';
 
-const DocBox = ({ id, title, link, description, genre, releaseDate, coverImg, episodes }) => {
+const DocCard = ({ id, title, link, description, genre, releaseDate, coverImg, episodes }) => {
     return (
         <div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
             <div>
@@ -25,4 +24,4 @@ const DocBox = ({ id, title, link, description, genre, releaseDate, coverImg, ep
     );
 }
 
-export default DocBox;
+export default DocCard;
